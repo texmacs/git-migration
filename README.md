@@ -2,7 +2,7 @@
 
 **NOTE**: The `users.txt` is intentionally kept secret for privacy.
 
-## Step By Step
+## Import from SVN
 ``` bash
 ./clone.sh sadhen users.txt
 cd texmacs
@@ -12,6 +12,13 @@ git branch -d trunk
 git remote set-url origin  git@github.com:texmacs/texmacs.git
 git push --all
 git push --tags
+```
+
+## Sync from SVN
+```
+git svn fetch
+git rebase trunk
+git push origin master
 ```
 
 ## Scripts
