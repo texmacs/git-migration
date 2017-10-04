@@ -21,6 +21,13 @@ git rebase trunk
 git push origin master
 ```
 
+## How to apply a patch from github PR
+```
+cd the-texmacs-svn-dir
+wget https://github.com/texmacs/texmacs/pull/1.patch -O /tmp/1.patch
+git apply /tmp/1.patch
+```
+
 ## Scripts
 | file | usage | description |
 |------|------|--------------|
