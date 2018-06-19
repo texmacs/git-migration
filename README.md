@@ -32,4 +32,5 @@ git apply /tmp/1.patch
 | file | usage | description |
 |------|------|--------------|
 | clone.sh | clone.sh `<username>` `<path_to_users.txt>` | clone from svn and set up the git project |
+| cloneV2.sh | cloneV2.sh `<username>` `<path_to_users.txt>` | clone from svn on trunk/src and set up the git project |
 | sync.sh  | sync.sh  | sync from svn to git                                                         |
