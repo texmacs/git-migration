@@ -4,12 +4,12 @@
 
 ## Import from SVN
 ``` bash
-./clone.sh sadhen users.txt
-cd texmacs
+./clone.sh sadhen trunk/src/TeXmacs/doc texmacs.authors doc
+cd doc
 for t in $(git for-each-ref --format='%(refname:short)' refs/remotes/tags); do git tag ${t/tags\//} $t && git branch -D -r $t; done
 for b in $(git for-each-ref --format='%(refname:short)' refs/remotes); do git branch $b refs/remotes/$b && git branch -D -r $b; done
 git branch -d trunk
-git remote set-url origin  git@github.com:texmacs/texmacs.git
+git remote add origin git@github.com:texmacs/doc.git
 git push --all
 git push --tags
 ```
@@ -32,5 +32,4 @@ git apply /tmp/1.patch
 | file | usage | description |
 |------|------|--------------|
 | clone.sh | clone.sh `<username>` `<path_to_users.txt>` | clone from svn and set up the git project |
-| cloneV2.sh | cloneV2.sh `<username>` `<path_to_users.txt>` | clone from svn on trunk/src and set up the git project |
 | sync.sh  | sync.sh  | sync from svn to git                                                         |
