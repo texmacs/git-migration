@@ -33,3 +33,9 @@ git apply /tmp/1.patch
 |------|------|--------------|
 | clone.sh | clone.sh `<username>` `<path_to_users.txt>` | clone from svn and set up the git project |
 | sync.sh  | sync.sh  | sync from svn to git                                                         |
+
+## Another way to prepare a plugin repo
+Hint:
+```
+git filter-branch --subdirectory-filter plugins/matlab
+```
